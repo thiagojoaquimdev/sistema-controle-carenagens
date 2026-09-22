@@ -1,180 +1,156 @@
-# Sistema de Controle de Carenagens
+# Fairing Control System
 
-Sistema web desenvolvido para digitalizar, organizar e acompanhar o processo operacional de recebimento, conferência e entrada de carenagens.
+Web-based system developed to digitalize, organize, and track the operational process of receiving, checking, and registering motorcycle fairings.
 
-O projeto foi desenvolvido com foco em organização, rastreabilidade, controle de etapas, gestão de usuários e redução de processos manuais.
-
----
-
-## Sobre o projeto
-
-O Sistema de Controle de Carenagens centraliza o fluxo de recebimento de peças, permitindo acompanhar cada etapa desde o registro da entrega até a realização da entrada.
-
-A aplicação permite registrar entregas, realizar conferências físicas, anexar documentos fiscais, comparar informações da NF-e com o recebimento, registrar divergências e acompanhar todo o histórico do processo.
-
-O sistema também possui controle de acesso por perfil de usuário, permitindo definir diferentes permissões para cada função.
+The project was developed with a focus on organization, traceability, process control, user management, and reducing manual processes.
 
 ---
 
-## Principais funcionalidades
+## About the Project
 
-- Autenticação de usuários
-- Controle de acesso por perfil
-- Gestão de usuários e permissões
-- Cadastro de novos usuários
-- Alteração, ativação e desativação de usuários
-- Troca de senha
-- Cadastro de novas entregas
-- Edição de entregas antes do recebimento
-- Controle de recebimentos
-- Salvamento automático durante o recebimento
-- Conferência física das peças
-- Registro de divergências
-- Registro de avarias
-- Controle de adequação da embalagem
-- Cadastro de observações
-- Consulta automática de referência e descrição das peças
-- Integração com base de dados em Excel
-- Anexação de NF-e
-- Visualização da NF-e dentro do sistema
-- Conferência da NF-e com o recebimento
-- Aprovação da conferência
-- Rejeição da conferência
-- Registro do motivo da rejeição
-- Substituição de NF-e quando necessário
-- Confirmação da entrada
-- Controle de status do recebimento
-- Histórico completo das movimentações
-- Linha do tempo de cada recebimento
-- Registro dos responsáveis por cada etapa
-- Registro de alterações realizadas nas referências e descrições
-- Avisos de alterações pendentes para o administrador
-- Dashboard com indicadores do período
-- Consulta de pedidos e recebimentos
-- Filtros por status
-- Pesquisa por recibo, responsável ou NF-e
-- Controle de notas fiscais
-- Histórico de entradas realizadas
+The Fairing Control System centralizes the parts receiving workflow, allowing each stage to be tracked from delivery registration through the completion of the inventory entry.
+
+The application allows users to register deliveries, perform physical inspections, attach fiscal documents, compare invoice information with the received items, record discrepancies, and track the complete process history.
+
+The system also includes role-based access control, allowing different permissions to be assigned according to each user's responsibilities.
 
 ---
 
-## Fluxo do processo
+## Main Features
 
-O processo operacional segue as seguintes etapas:
-
-**Nova Entrega**
-
-↓
-
-**Recebimento**
-
-↓
-
-**Conferência Física**
-
-↓
-
-**Anexação da NF-e**
-
-↓
-
-**Conferência da NF-e**
-
-↓
-
-**Aprovação ou Rejeição**
-
-### Se aprovado
-
-**Entrada Realizada**
-
-↓
-
-**Finalização**
-
-### Se rejeitado
-
-**Retorno para correção / substituição da NF-e**
-
-↓
-
-**Nova conferência**
+- User authentication and role-based access control
+- User and permission management
+- Delivery and receiving management
+- Physical inspection and discrepancy tracking
+- Part reference and description lookup
+- Excel database integration
+- Invoice (NF-e) attachment and verification
+- Approval, rejection, and invoice replacement workflow
+- Receiving status and process tracking
+- Complete history and activity timeline
+- Dashboard with operational indicators
+- Search and filtering by receipt, user, status, or invoice
+- Change tracking and administrator notifications
 
 ---
 
-## Controle de acesso
+## Process Flow
 
-O sistema possui diferentes perfis de usuário:
+The operational process follows these stages:
 
-| Perfil | Acesso |
+**New Delivery**
+
+↓
+
+**Receiving**
+
+↓
+
+**Physical Inspection**
+
+↓
+
+**Invoice Attachment**
+
+↓
+
+**Invoice Verification**
+
+↓
+
+**Approval or Rejection**
+
+### If Approved
+
+**Entry Completed**
+
+↓
+
+**Process Finalized**
+
+### If Rejected
+
+**Correction / Invoice Replacement**
+
+↓
+
+**New Verification**
+
+---
+
+## Access Control
+
+The system has different user roles:
+
+| Role | Access |
 |---|---|
-| Administrador | Acesso completo ao sistema |
-| Operador | Recebimento e acompanhamento operacional |
-| Conferente | Conferência de NF-e e documentos |
-| Fornecedor | Cadastro de novas entregas |
+| Administrator | Full system access |
+| Operator | Receiving and operational management |
+| Inspector | Invoice and document verification |
+| Supplier | New delivery registration |
 
-As permissões podem ser configuradas individualmente de acordo com o perfil do usuário.
-
----
-
-## Rastreabilidade
-
-Cada recebimento possui um histórico próprio, permitindo acompanhar:
-
-- Criação da entrega
-- Responsável pelo recebimento
-- Início do recebimento
-- Conferência realizada pelo operador
-- Alterações de referências e descrições
-- Anexação da NF-e
-- Conferência da NF-e
-- Aprovação ou rejeição
-- Motivo da rejeição
-- Responsável pela conferência
-- Realização da entrada
-- Data e horário de cada etapa
-
-Dessa forma, o processo pode ser acompanhado desde o início até sua finalização.
+Permissions can be individually configured according to each user's role.
 
 ---
 
-## Integração com Excel
+## Traceability
 
-O sistema utiliza uma base de dados em Excel como catálogo das peças.
+Each receiving record has its own history, allowing the complete process to be tracked, including:
 
-A partir da referência informada, o sistema consulta a base e preenche automaticamente a descrição correspondente.
+- Delivery creation
+- Receiving responsible user
+- Receiving start
+- Physical inspection performed by the operator
+- Reference and description changes
+- Invoice attachment
+- Invoice verification
+- Approval or rejection
+- Rejection reason
+- Verification responsible user
+- Entry completion
+- Date and time of each stage
 
-Essa integração reduz a necessidade de digitação manual e ajuda a manter a padronização das informações.
+This allows the entire process to be monitored from its creation through completion.
+
+---
+
+## Excel Integration
+
+The system uses an Excel database as the parts catalog.
+
+Based on the entered part reference, the system searches the database and automatically fills in the corresponding description.
+
+This reduces manual data entry and helps maintain consistent information throughout the system.
 
 ---
 
 ## Dashboard
 
-O sistema possui um dashboard para acompanhamento das movimentações no período selecionado.
+The system includes a dashboard for monitoring operations within a selected period.
 
-São apresentados indicadores como:
+The dashboard displays indicators such as:
 
-- Quantidade de carenagens pintadas
-- Quantidade de recibos gerados
-- Referências movimentadas
-- Quantidades conferidas
-- Período analisado
+- Number of painted fairings
+- Number of generated receipts
+- Part references processed
+- Quantities inspected
+- Selected analysis period
 
-Também é possível consultar os dados agrupados por referência.
-
----
-
-## Interface do sistema
-
-### Início
-
-![Tela Inicial](./screenshots/01-inicio.png)
+The data can also be viewed grouped by part reference.
 
 ---
 
-### Detalhes do Recebimento
+## System Interface
 
-![Detalhes do Recebimento](./screenshots/02-detalhes-recebimento.png)
+### Home
+
+![Home](./screenshots/01-inicio.png)
+
+---
+
+### Receiving Details
+
+![Receiving Details](./screenshots/02-detalhes-recebimento.png)
 
 ---
 
@@ -184,64 +160,64 @@ Também é possível consultar os dados agrupados por referência.
 
 ---
 
-### Nova Entrega
+### New Delivery
 
-![Nova Entrega](./screenshots/04-nova-entrega.png)
-
----
-
-### Receber Entrega
-
-![Receber Entrega](./screenshots/05-receber-entrega.png)
+![New Delivery](./screenshots/04-nova-entrega.png)
 
 ---
 
-### Entrada do Recebimento
+### Receive Delivery
 
-![Entrada do Recebimento](./screenshots/06-entrada-recebimento.png)
-
----
-
-### Conferência
-
-![Conferência](./screenshots/07-conferencia.png)
+![Receive Delivery](./screenshots/05-receber-entrega.png)
 
 ---
 
-### Entrada Aprovada
+### Receiving Entry
 
-![Entrada Aprovada](./screenshots/08-entrada-aprovada.png)
-
----
-
-### Notas Fiscais
-
-![Notas Fiscais](./screenshots/09-notas-fiscais.png)
+![Receiving Entry](./screenshots/06-entrada-recebimento.png)
 
 ---
 
-### Histórico
+### Verification
 
-![Histórico](./screenshots/10-historico.png)
-
----
-
-### Gerenciamento
-
-![Gerenciamento](./screenshots/11-gerenciamento.png)
+![Verification](./screenshots/07-conferencia.png)
 
 ---
 
-## Tecnologias utilizadas
+### Approved Entry
 
-### Linguagens
+![Approved Entry](./screenshots/08-entrada-aprovada.png)
+
+---
+
+### Invoices
+
+![Invoices](./screenshots/09-notas-fiscais.png)
+
+---
+
+### History
+
+![History](./screenshots/10-historico.png)
+
+---
+
+### User Management
+
+![User Management](./screenshots/11-gerenciamento.png)
+
+---
+
+## Technologies Used
+
+### Languages
 
 - Python
 - HTML5
 - CSS3
 - JavaScript
 
-### Tecnologias e ferramentas
+### Technologies & Tools
 
 - Flask
 - SQLite
@@ -250,7 +226,7 @@ Também é possível consultar os dados agrupados por referência.
 
 ---
 
-## Estrutura do projeto
+## Project Structure
 
 ```text
 sistema-controle-carenagens/
