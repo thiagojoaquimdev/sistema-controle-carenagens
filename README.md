@@ -263,8 +263,6 @@ sistema-controle-carenagens/
 ├── templates/
 │   ├── login.html
 │   ├── index.html
-│   ├── nova_entrega.html
-│   ├── recebimentos_operador.html
 │   ├── gerenciamento.html
 │   └── trocar_senha.html
 │
