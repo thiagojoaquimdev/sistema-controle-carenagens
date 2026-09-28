@@ -91,16 +91,6 @@ This provides visibility throughout the complete operational workflow.
 
 ---
 
-## Excel Integration
-
-The system uses an Excel database as the parts catalog.
-
-When a part reference is selected, the application searches the catalog and automatically fills in the corresponding description.
-
-This reduces manual data entry and helps maintain consistent part information.
-
----
-
 ## Dashboard
 
 The dashboard provides operational indicators for a selected period, including:
