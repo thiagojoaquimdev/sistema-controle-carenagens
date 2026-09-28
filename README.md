@@ -1,18 +1,18 @@
 # Fairing Control System
 
-Web-based system developed to digitalize, organize, and track the operational process of receiving, checking, and registering motorcycle fairings.
+A web-based system developed to digitalize, organize, and track the operational process of receiving, inspecting, and registering motorcycle fairings.
 
-The project was developed with a focus on organization, traceability, process control, user management, and reducing manual processes.
+The project focuses on process organization, traceability, operational control, user management, and reducing manual activities.
 
 ---
 
 ## About the Project
 
-The Fairing Control System centralizes the parts receiving workflow, allowing each stage to be tracked from delivery registration through the completion of the inventory entry.
+The Fairing Control System centralizes the fairing receiving workflow, allowing each stage to be monitored from delivery registration to the completion of the inventory entry.
 
-The application allows users to register deliveries, perform physical inspections, attach fiscal documents, compare invoice information with the received items, record discrepancies, and track the complete process history.
+The application supports delivery registration, physical inspection, invoice attachment and verification, discrepancy tracking, approval or rejection workflows, and complete process history.
 
-The system also includes role-based access control, allowing different permissions to be assigned according to each user's responsibilities.
+It also includes role-based access control, allowing permissions to be assigned according to each user's responsibilities.
 
 ---
 
@@ -23,12 +23,12 @@ The system also includes role-based access control, allowing different permissio
 - Delivery and receiving management
 - Physical inspection and discrepancy tracking
 - Part reference and description lookup
-- Excel database integration
-- Invoice (NF-e) attachment and verification
+- Excel-based parts catalog integration
+- NF-e attachment and verification
 - Approval, rejection, and invoice replacement workflow
 - Receiving status and process tracking
 - Complete history and activity timeline
-- Dashboard with operational indicators
+- Operational dashboard
 - Search and filtering by receipt, user, status, or invoice
 - Change tracking and administrator notifications
 
@@ -36,51 +36,29 @@ The system also includes role-based access control, allowing different permissio
 
 ## Process Flow
 
-The operational process follows these stages:
+```text
+New Delivery
+     ↓
+Receiving
+     ↓
+Physical Inspection
+     ↓
+Invoice Attachment
+     ↓
+Invoice Verification
+     ↓
+Approval or Rejection
+     ↓
+Entry Completed
+     ↓
+Process Finalized
+```
 
-**New Delivery**
-
-↓
-
-**Receiving**
-
-↓
-
-**Physical Inspection**
-
-↓
-
-**Invoice Attachment**
-
-↓
-
-**Invoice Verification**
-
-↓
-
-**Approval or Rejection**
-
-### If Approved
-
-**Entry Completed**
-
-↓
-
-**Process Finalized**
-
-### If Rejected
-
-**Correction / Invoice Replacement**
-
-↓
-
-**New Verification**
+When an invoice is rejected, the process returns for correction or replacement and a new verification is performed.
 
 ---
 
 ## Access Control
-
-The system has different user roles:
 
 | Role | Access |
 |---|---|
@@ -89,28 +67,27 @@ The system has different user roles:
 | Inspector | Invoice and document verification |
 | Supplier | New delivery registration |
 
-Permissions can be individually configured according to each user's role.
+Permissions can be configured according to each user's role.
 
 ---
 
 ## Traceability
 
-Each receiving record has its own history, allowing the complete process to be tracked, including:
+Each receiving record maintains a history of the process, including:
 
 - Delivery creation
-- Receiving responsible user
+- Responsible users
 - Receiving start
-- Physical inspection performed by the operator
+- Physical inspection
 - Reference and description changes
 - Invoice attachment
 - Invoice verification
 - Approval or rejection
 - Rejection reason
-- Verification responsible user
 - Entry completion
 - Date and time of each stage
 
-This allows the entire process to be monitored from its creation through completion.
+This provides visibility throughout the complete operational workflow.
 
 ---
 
@@ -118,25 +95,23 @@ This allows the entire process to be monitored from its creation through complet
 
 The system uses an Excel database as the parts catalog.
 
-Based on the entered part reference, the system searches the database and automatically fills in the corresponding description.
+When a part reference is selected, the application searches the catalog and automatically fills in the corresponding description.
 
-This reduces manual data entry and helps maintain consistent information throughout the system.
+This reduces manual data entry and helps maintain consistent part information.
 
 ---
 
 ## Dashboard
 
-The system includes a dashboard for monitoring operations within a selected period.
+The dashboard provides operational indicators for a selected period, including:
 
-The dashboard displays indicators such as:
-
-- Number of painted fairings
-- Number of generated receipts
-- Part references processed
-- Quantities inspected
+- Painted fairings
+- Generated receipts
+- Processed part references
+- Inspected quantities
 - Selected analysis period
 
-The data can also be viewed grouped by part reference.
+The information can also be viewed grouped by part reference.
 
 ---
 
@@ -144,71 +119,51 @@ The data can also be viewed grouped by part reference.
 
 ### Home
 
-![Home](./screenshots/01-inicio.png)
-
----
-
-### Receiving Details
-
-![Receiving Details](./screenshots/02-detalhes-recebimento.png)
-
----
+![Home](./screenshots/inicio.png)
 
 ### Dashboard
 
-![Dashboard](./screenshots/03-dashboard.png)
-
----
+![Dashboard](./screenshots/dashboard.png)
 
 ### New Delivery
 
-![New Delivery](./screenshots/04-nova-entrega.png)
-
----
+![New Delivery](./screenshots/nova_entrega.png)
 
 ### Receive Delivery
 
-![Receive Delivery](./screenshots/05-receber-entrega.png)
-
----
+![Receive Delivery](./screenshots/receber_entrega.png)
 
 ### Receiving Entry
 
-![Receiving Entry](./screenshots/06-entrada-recebimento.png)
+![Receiving Entry](./screenshots/entrada_do_recebimento.png)
 
----
+### Physical Inspection
 
-### Verification
-
-![Verification](./screenshots/07-conferencia.png)
-
----
+![Physical Inspection](./screenshots/conferencia.png)
 
 ### Approved Entry
 
-![Approved Entry](./screenshots/08-entrada-aprovada.png)
+![Approved Entry](./screenshots/confirmar_entrada.png)
 
----
+### Pending Entries
+
+![Pending Entries](./screenshots/entradas_pendentes.png)
 
 ### Invoices
 
-![Invoices](./screenshots/09-notas-fiscais.png)
-
----
+![Invoices](./screenshots/nfes.png)
 
 ### History
 
-![History](./screenshots/10-historico.png)
-
----
+![History](./screenshots/historico.png)
 
 ### User Management
 
-![User Management](./screenshots/11-gerenciamento.png)
+![User Management](./screenshots/gerenciamento.png)
 
 ---
 
-## Technologies Used
+## Technologies
 
 ### Languages
 
@@ -217,12 +172,13 @@ The data can also be viewed grouped by part reference.
 - CSS3
 - JavaScript
 
-### Technologies & Tools
+### Tools and Technologies
 
 - Flask
 - SQLite
 - OpenPyXL
 - JSON
+- Excel
 
 ---
 
@@ -232,14 +188,45 @@ The data can also be viewed grouped by part reference.
 sistema-controle-carenagens/
 │
 ├── app.py
-├── carenagens.db
-├── historico_fluxo.json
-├── Base de Dados - Carenagens.xlsx
+├── README.md
+│
+├── static/
+│   └── icons/
+│       ├── conferencia.svg
+│       ├── dashboard.svg
+│       ├── entradas-pendentes.svg
+│       ├── gerenciamento.png
+│       ├── historico.svg
+│       ├── inicio.svg
+│       ├── logo-simbolo.svg
+│       ├── notas-fiscais.svg
+│       ├── nova-entrega.svg
+│       └── novo-recebimento.svg
 │
 ├── templates/
-│   ├── login.html
-│   ├── index.html
 │   ├── gerenciamento.html
+│   ├── index.html
+│   ├── login.html
 │   └── trocar_senha.html
 │
-├── nfes/
+└── screenshots/
+    ├── inicio.png
+    ├── dashboard.png
+    ├── nova_entrega.png
+    ├── receber_entrega.png
+    ├── entradas_pendentes.png
+    ├── entrada_do_recebimento.png
+    ├── conferencia.png
+    ├── confirmar_entrada.png
+    ├── nfes.png
+    ├── historico.png
+    └── gerenciamento.png
+```
+
+> Operational databases, invoices, and other internal files should not be committed to a public repository.
+
+---
+
+## Project Goal
+
+The project was created to transform a manual operational workflow into a centralized digital process, improving organization, traceability, and visibility across the receiving and inspection stages.
