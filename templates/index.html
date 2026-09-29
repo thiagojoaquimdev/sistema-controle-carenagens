@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle de Carenagens</title>
 
-    
-
 {% if pagina not in ['login', 'trocar-senha', 'gerenciamento'] %}
 <style>
 
@@ -718,9 +716,6 @@
             background: #fffaf0;
         }
 
-        /* =====================================================
-           IDENTIDADE AVELLOZ + MENU
-           ===================================================== */
         :root {
             --avelloz-orange: #17253f;
             --avelloz-navy: #17253f;
@@ -736,7 +731,6 @@
             padding: 0 20px;
         }
 
-        /* Ícones dos módulos: aparecem apenas quando o menu está recolhido */
         .menu-item .modulo-icone {
             display: block;
             width: 20px;
@@ -805,7 +799,6 @@
             justify-content: flex-start;
         }
 
-        /* Menu fechado: mostra somente o símbolo laranja que já faz parte da logo oficial. */
         .sidebar.recolhida .logo-marca img {
             display: block;
             width: 154px;
@@ -850,7 +843,6 @@
             width: calc(100% - 76px);
         }
 
-        /* Quando o menu estiver fechado, o botão fica colado à lateral do menu */
         .main.menu-recolhido .topbar {
             padding-left: 0;
         }
@@ -955,9 +947,6 @@
             }
         }
 
-        /* =====================================================
-           RESPONSIVIDADE DO MENU
-        ===================================================== */
         .sidebar-backdrop {
             display: none;
             position: fixed;
@@ -1048,9 +1037,6 @@
             }
         }
 
-        /* =====================================================
-           DASHBOARD
-        ===================================================== */
         .dashboard-filtro {
             background:#fff;
             border:1px solid #e5e7eb;
@@ -1110,9 +1096,6 @@
         @media(max-width:560px){ .cards{grid-template-columns:1fr;} }
         @media(max-width:700px){ .dashboard-cards{grid-template-columns:1fr;} .periodo-datas{width:100%; flex-direction:column; align-items:stretch;} .campo-data-dashboard input{width:100%;} .dashboard-filtro{align-items:stretch;} .dashboard-acoes{width:100%; flex-direction:column; align-items:stretch;} .dashboard-acoes .botao-principal{width:100%;} }
 
-        /* =====================================================
-           ACOMPANHAMENTO EM TEMPO REAL
-        ===================================================== */
         .acompanhamento-cabecalho { display:flex; justify-content:space-between; align-items:flex-start; gap:20px; }
         .status-tempo-real { font-size:13px; font-weight:600; color:#16834b; padding-top:8px; white-space:nowrap; }
         .card-roxo { background:#f1e7ff; color:#6d28d9; }
@@ -1159,7 +1142,6 @@
         @media (max-width:1000px) { .filtros-acompanhamento { flex-direction:column; align-items:stretch; } .filtros-status { justify-content:flex-start; } .detalhe-resumo-grid { grid-template-columns:repeat(2,1fr); } .detalhe-grid { grid-template-columns:1fr; } }
         @media (max-width:600px) { .detalhe-resumo-grid { grid-template-columns:1fr; } .acompanhamento-cabecalho { flex-direction:column; } }
 
-        /* Conferência: comparação lado a lado da NF-e com o recebimento */
         .conferencia-comparacao {
             display:grid;
             grid-template-columns:minmax(360px, 0.9fr) minmax(500px, 1.1fr);
@@ -1195,11 +1177,6 @@
             }
         }
 
-        /* =====================================================
-           AJUSTE FINAL DA IDENTIDADE VISUAL AVELLOZ
-           Azul baseado na cor do lettering da logo oficial.
-           O laranja fica restrito à própria logo.
-        ===================================================== */
         :root {
             --avelloz-navy: #17253f;
             --avelloz-blue: #17253f;
@@ -1238,7 +1215,6 @@
             background: #243b5d !important;
         }
 
-        /* Ações principais seguem o azul oficial da logo. */
         .botao-principal, .botao-abrir, .botao-pequeno {
             background: #17253f !important;
             border-color: #17253f !important;
@@ -1254,12 +1230,10 @@
             background: #edf2f8 !important;
         }
 
-
 </style>
 {% endif %}
 {% if pagina == 'login' %}
 <style>
-
 
         * {
             box-sizing: border-box;
@@ -1433,7 +1407,6 @@
 {% endif %}
 {% if pagina == 'trocar-senha' %}
 <style>
-
 
         * {
             box-sizing: border-box;
@@ -1669,7 +1642,6 @@
         .logo-marca img { width: 170px; max-width:100%; height:auto; display:block; }
         :root { --avelloz-orange:#17253f; --avelloz-navy:#17253f; }
 
-        /* Identidade visual Avelloz — azul como cor estrutural */
         body { background: #f3f6fb; }
         .topo { border-bottom: 2px solid #e8eef9; }
         button, .botao, .acao, .btn { background-color: #17253f; }
@@ -1677,12 +1649,10 @@
         input:focus, select:focus, textarea:focus { border-color: #17253f !important; box-shadow: 0 0 0 2px rgba(23,37,63,.10) !important; }
         .logo-marca img { object-fit: contain; }
 
-
 </style>
 {% endif %}
 {% if pagina == 'gerenciamento' %}
 <style>
-
 
         * {
             box-sizing: border-box;
@@ -1694,10 +1664,6 @@
             background: #f5f6f8;
             color: #172033;
         }
-
-        /* =========================
-           TOPO
-        ========================== */
 
         .topo {
             height: 70px;
@@ -1754,10 +1720,6 @@
             margin-top: 2px;
         }
 
-        /* =========================
-           USUÁRIO
-        ========================== */
-
         .usuario {
             display: flex;
             align-items: center;
@@ -1801,10 +1763,6 @@
             font-weight: bold;
         }
 
-        /* =========================
-           CONTEÚDO
-        ========================== */
-
         .conteudo {
             max-width: 1300px;
 
@@ -1831,10 +1789,6 @@
             font-size: 13px;
         }
 
-        /* =========================
-           CARD
-        ========================== */
-
         .card {
             background: white;
 
@@ -1854,10 +1808,6 @@
 
             margin-bottom: 20px;
         }
-
-        /* =========================
-           FORMULÁRIO
-        ========================== */
 
         .form-grid {
             display: grid;
@@ -1903,10 +1853,6 @@
         .campo select:focus {
             border-color: #17253f;
         }
-
-        /* =========================
-           PERMISSÕES
-        ========================== */
 
         .permissoes-box {
             margin-top: 20px;
@@ -2056,10 +2002,6 @@
             color: #4b5563;
         }
 
-        /* =========================
-           BOTÕES
-        ========================== */
-
         .botao {
             margin-top: 20px;
 
@@ -2124,8 +2066,6 @@
             background: #f5f6f8;
         }
 
-        /* BOTÃO RESETAR SENHA */
-
         .btn-senha {
             color: #2459b8;
 
@@ -2136,8 +2076,6 @@
             background: #eef4ff;
         }
 
-        /* BOTÃO EXCLUIR */
-
         .btn-excluir {
             color: #17253f;
 
@@ -2147,10 +2085,6 @@
         .btn-excluir:hover {
             background: #fff0ee;
         }
-
-        /* =========================
-           TABELA
-        ========================== */
 
         .tabela-wrapper {
             width: 100%;
@@ -2190,10 +2124,6 @@
             font-size: 12px;
         }
 
-        /* =========================
-           CARGOS
-        ========================== */
-
         .badge {
             display: inline-block;
 
@@ -2224,10 +2154,6 @@
             color: #23824b;
         }
 
-        /* =========================
-           STATUS
-        ========================== */
-
         .ativo {
             color: #23824b;
 
@@ -2239,10 +2165,6 @@
 
             font-weight: bold;
         }
-
-        /* =========================
-           ALERTAS
-        ========================== */
 
         .alerta {
             padding: 12px;
@@ -2265,10 +2187,6 @@
 
             color: #b42318;
         }
-
-        /* =========================
-           RESPONSIVO
-        ========================== */
 
         @media (max-width: 1100px) {
 
@@ -2310,7 +2228,6 @@
         .logo-marca img { width: 170px; max-width:100%; height:auto; display:block; }
         :root { --avelloz-orange:#17253f; --avelloz-navy:#17253f; }
 
-        /* Identidade visual Avelloz — azul como cor estrutural */
         body { background: #f3f6fb; }
         .topo { border-bottom: 2px solid #e8eef9; }
         button, .botao, .acao, .btn { background-color: #17253f; }
@@ -2318,13 +2235,11 @@
         input:focus, select:focus, textarea:focus { border-color: #17253f !important; box-shadow: 0 0 0 2px rgba(23,37,63,.10) !important; }
         .logo-marca img { object-fit: contain; }
 
-
 </style>
 {% endif %}
 </head>
 <body>
 {% if pagina == 'login' %}
-
 
     <div class="login">
 
@@ -2401,7 +2316,6 @@
 
 <script>
 (function () {
-    // ---- CSRF: injeta o token em todo form POST ----
     var meta = document.querySelector('meta[name="csrf-token"]');
     var token = meta ? meta.getAttribute('content') : null;
     if (token) {
@@ -2417,7 +2331,6 @@
         });
     }
 
-    // ---- Menu mobile (hamburguer) - só existe no layout com sidebar (index.html) ----
     var botaoMenu = document.getElementById('botaoMenuMobile');
     var sidebar = document.getElementById('sidebarPrincipal');
     var backdrop = document.getElementById('sidebarBackdrop');
@@ -2444,12 +2357,6 @@
         });
     }
 
-    // ---- Evita duplo envio ----
-    // Ao submeter um formulário válido (nenhum outro handler já cancelou
-    // via preventDefault/confirm/return false), desabilita os botões de
-    // envio e mostra um texto de carregamento. Roda por último (script
-    // no fim do body), então "event.defaultPrevented" já reflete o
-    // resultado de validações anteriores do próprio formulário.
     document.querySelectorAll('form').forEach(function (form) {
         form.addEventListener('submit', function (evento) {
             if (evento.defaultPrevented) { return; }
@@ -2472,7 +2379,6 @@
 
 {% endif %}
 {% if pagina == 'trocar-senha' %}
-
 
     <div class="caixa">
 
@@ -2598,7 +2504,6 @@
 
 <script>
 (function () {
-    // ---- CSRF: injeta o token em todo form POST ----
     var meta = document.querySelector('meta[name="csrf-token"]');
     var token = meta ? meta.getAttribute('content') : null;
     if (token) {
@@ -2614,7 +2519,6 @@
         });
     }
 
-    // ---- Menu mobile (hamburguer) - só existe no layout com sidebar (index.html) ----
     var botaoMenu = document.getElementById('botaoMenuMobile');
     var sidebar = document.getElementById('sidebarPrincipal');
     var backdrop = document.getElementById('sidebarBackdrop');
@@ -2641,12 +2545,6 @@
         });
     }
 
-    // ---- Evita duplo envio ----
-    // Ao submeter um formulário válido (nenhum outro handler já cancelou
-    // via preventDefault/confirm/return false), desabilita os botões de
-    // envio e mostra um texto de carregamento. Roda por último (script
-    // no fim do body), então "event.defaultPrevented" já reflete o
-    // resultado de validações anteriores do próprio formulário.
     document.querySelectorAll('form').forEach(function (form) {
         form.addEventListener('submit', function (evento) {
             if (evento.defaultPrevented) { return; }
@@ -2669,7 +2567,6 @@
 
 {% endif %}
 {% if pagina == 'gerenciamento' %}
-
 
 <header class="topo">
 
@@ -3143,10 +3040,6 @@
 
 <script>
 
-    /* =====================================================
-       MOSTRAR PERMISSÕES DO CARGO
-    ====================================================== */
-
     function mostrarPermissoesSelecionadas() {
 
         const lista =
@@ -3244,10 +3137,6 @@
 
     }
 
-    /* =====================================================
-       CONFIRMAR RESET
-    ====================================================== */
-
     function confirmarReset(
         nome
     ) {
@@ -3270,10 +3159,6 @@
 
     }
 
-    /* =====================================================
-       CONFIRMAR EXCLUSÃO
-    ====================================================== */
-
     function confirmarExclusao(
         nome
     ) {
@@ -3290,17 +3175,12 @@
 
     }
 
-    /* =====================================================
-       INICIALIZAÇÃO
-    ====================================================== */
-
     mostrarPermissoesSelecionadas();
 
 </script>
 
 <script>
 (function () {
-    // ---- CSRF: injeta o token em todo form POST ----
     var meta = document.querySelector('meta[name="csrf-token"]');
     var token = meta ? meta.getAttribute('content') : null;
     if (token) {
@@ -3316,7 +3196,6 @@
         });
     }
 
-    // ---- Menu mobile (hamburguer) - só existe no layout com sidebar (index.html) ----
     var botaoMenu = document.getElementById('botaoMenuMobile');
     var sidebar = document.getElementById('sidebarPrincipal');
     var backdrop = document.getElementById('sidebarBackdrop');
@@ -3343,12 +3222,6 @@
         });
     }
 
-    // ---- Evita duplo envio ----
-    // Ao submeter um formulário válido (nenhum outro handler já cancelou
-    // via preventDefault/confirm/return false), desabilita os botões de
-    // envio e mostra um texto de carregamento. Roda por último (script
-    // no fim do body), então "event.defaultPrevented" já reflete o
-    // resultado de validações anteriores do próprio formulário.
     document.querySelectorAll('form').forEach(function (form) {
         form.addEventListener('submit', function (evento) {
             if (evento.defaultPrevented) { return; }
@@ -3371,7 +3244,6 @@
 
 {% endif %}
 {% if pagina not in ['login', 'trocar-senha', 'gerenciamento'] %}
-
 
 <div class="layout">
 
@@ -5294,11 +5166,6 @@
 
 <script>
 
-    // =====================================================
-    // REFERÊNCIA -> DESCRIÇÃO (base XLSX)
-    // Campo pesquisável: o usuário vê/digita somente a referência.
-    // A descrição fica no campo próprio e é preenchida automaticamente.
-    // =====================================================
     const catalogoCarenagens = {{ catalogo_carenagens | tojson }};
 
     function preencherDescricao(campoReferencia) {
@@ -5318,9 +5185,6 @@
         }
     }
 
-    // =====================================================
-    // BLOQUEIO DE REFERÊNCIAS REPETIDAS NA MESMA ENTREGA
-    // =====================================================
     function validarReferenciasDuplicadas() {
         const campos = Array.from(document.querySelectorAll("#itens-entrega .referencia-carenagem"));
         const ocorrencias = {};
@@ -5375,16 +5239,11 @@
         validarReferenciasDuplicadas();
     }
 
-    // Preenche as descrições dos itens já carregados na tela do operador.
     document.querySelectorAll(".referencia-carenagem").forEach(function(campo) {
         preencherDescricao(campo);
     });
 
     configurarBloqueioReferenciasRepetidas();
-
-    // =====================================================
-    // ADICIONAR ITEM
-    // =====================================================
 
     function adicionarItem() {
 
@@ -5463,10 +5322,6 @@
         tabela.appendChild(linha);
     }
 
-    // =====================================================
-    // REMOVER ITEM
-    // =====================================================
-
     function removerItem(botao) {
 
         const tabela =
@@ -5492,10 +5347,6 @@
             .closest("tr")
             .remove();
     }
-
-    // =====================================================
-    // MOSTRAR DETALHES
-    // =====================================================
 
     function mostrarDetalhe(
         selectId,
@@ -5657,7 +5508,6 @@ function copiarDadosConferencia(formDestino) {
 </script>
 <script>
 (function () {
-    // ---- CSRF: injeta o token em todo form POST ----
     var meta = document.querySelector('meta[name="csrf-token"]');
     var token = meta ? meta.getAttribute('content') : null;
     if (token) {
@@ -5673,7 +5523,6 @@ function copiarDadosConferencia(formDestino) {
         });
     }
 
-    // ---- Menu mobile (hamburguer) - só existe no layout com sidebar (index.html) ----
     var botaoMenu = document.getElementById('botaoMenuMobile');
     var sidebar = document.getElementById('sidebarPrincipal');
     var backdrop = document.getElementById('sidebarBackdrop');
@@ -5718,12 +5567,6 @@ function copiarDadosConferencia(formDestino) {
         });
     }
 
-    // ---- Evita duplo envio ----
-    // Ao submeter um formulário válido (nenhum outro handler já cancelou
-    // via preventDefault/confirm/return false), desabilita os botões de
-    // envio e mostra um texto de carregamento. Roda por último (script
-    // no fim do body), então "event.defaultPrevented" já reflete o
-    // resultado de validações anteriores do próprio formulário.
     document.querySelectorAll('form').forEach(function (form) {
         form.addEventListener('submit', function (evento) {
             if (evento.defaultPrevented) { return; }
